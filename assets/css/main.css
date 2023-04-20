@@ -17,7 +17,7 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio, video, .dropbtn, photos {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -771,7 +771,7 @@ input, select, textarea {
 			margin-left: 2rem;
 		}
 
-/* Actions */
+/* Actions 
 
 	ul.actions {
 		display: -moz-flex;
@@ -891,7 +891,7 @@ input, select, textarea {
 							margin-left: -0.5em;
 						}
 
-		}
+		}*/
 
 /* Icons */
 
@@ -998,7 +998,7 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="submit"],
+/*	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -1103,7 +1103,7 @@ input, select, textarea {
 	button {
 		line-height: calc(2.75rem - 2px);
 	}
-
+*/
 /* BG */
 
 	#bg {
@@ -1112,6 +1112,7 @@ input, select, textarea {
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
 		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -1334,7 +1335,7 @@ input, select, textarea {
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
-			border: solid 1px #ffffff;
+			border: solid 0px #ffffff;
 			border-radius: 4px;
 		}
 
@@ -1347,7 +1348,7 @@ input, select, textarea {
 					border-left: 0;
 				}
 
-				#header nav ul li:nth-child(4){
+				#header nav ul li:nth-child(5){
 					border-right:0;
 					}
 
@@ -1371,12 +1372,61 @@ input, select, textarea {
 						background-color: rgba(255, 255, 255, 0.175);
 					}
 
-		
-
+					/* Dropdown Button */
+			.dropbtn {
+				color: inherit;
+				display: block;
+				min-width: 7.5rem;
+				height: 2.75rem;
+				line-height: 2.75rem;
+				padding: 0 1.25rem 0 1.45rem;
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				font-size: 0.8rem;
+				border-bottom: 0;
+				background-color: inherit;
+				border:  0;
+				border-right: solid 1px #ffffff;
+			}
+			
+			/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+			
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: rgba(255, 255, 255, 0.075);
+				width: 100%;
+				overflow: auto
+			}
+			/* Links inside the dropdown */
+			.dropdown-content a {
+				color: rgb(255, 255, 255);
+				display: block;
+				min-width: 7.5rem;
+				height: 2.75rem;
+				line-height: 2.75rem;
+				padding: 0 1.25rem 0 1.45rem;
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				font-size: 0.8rem;
+				border-bottom: 0;
+			}
+			
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: rgba(255, 255, 255, 0.175);}
+			
+			/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {display: block;}
+			
 		#header nav.use-middle ul li.is-middle {
 			border-left: 0;
 		}
-
+		
 		body.is-article-visible #header {
 			-moz-transform: scale(0.95);
 			-webkit-transform: scale(0.95);
@@ -1406,6 +1456,15 @@ input, select, textarea {
 				padding-bottom: 0;
 				opacity: 0;
 			}
+
+		
+
+
+
+
+
+
+
 
 		@media screen and (max-width: 980px) {
 
@@ -1532,6 +1591,24 @@ input, select, textarea {
 			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
 			position: relative;
 			width: 40rem;
+			max-width: 100%;
+			background-color: rgba(27, 31, 34, 0.85);
+			border-radius: 4px;
+			opacity: 0;
+		}
+
+		#photos{
+			-moz-transform: translateY(0.25rem);
+			-webkit-transform: translateY(0.25rem);
+			-ms-transform: translateY(0.25rem);
+			transform: translateY(0.25rem);
+			-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
+			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
+			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
+			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			position: relative;
+			width: 70rem;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
