@@ -18,7 +18,8 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video, 
-.dropbtn, .container-pgiall, .container-pgi, .pgi {
+.dropbtn, .container-pgiall, .container-pgi, .pgi, 
+.halfscreen1, .halfscreen2, .map {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1760,6 +1761,16 @@ input, select, textarea {
 		.container-pgi {
 			width: 100%;
 		}
+	}
+
+/* Contact */
+	.halfscreen1,
+	.halfscreen2 {
+		width: 50%;
+		float: left;
+	}	
+	.map {
+		width:max-content
 	}
 /* Footer */
 
