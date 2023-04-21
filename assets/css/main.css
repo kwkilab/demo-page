@@ -17,7 +17,8 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video, .dropbtn, photos {
+section, summary, time, mark, audio, video, 
+.dropbtn, .container-pgiall, .container-pgi, .pgi {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1597,24 +1598,6 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		#photos{
-			-moz-transform: translateY(0.25rem);
-			-webkit-transform: translateY(0.25rem);
-			-ms-transform: translateY(0.25rem);
-			transform: translateY(0.25rem);
-			-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
-			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
-			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
-			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
-			position: relative;
-			width: 70rem;
-			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
-			border-radius: 4px;
-			opacity: 0;
-		}
-
 			#main article.active {
 				-moz-transform: translateY(0);
 				-webkit-transform: translateY(0);
@@ -1686,7 +1669,98 @@ input, select, textarea {
 			}
 
 		}
+/* Gallery */
+	#main .article-pgi {
+		-moz-transform: translateY(0.25rem);
+		-webkit-transform: translateY(0.25rem);
+		-ms-transform: translateY(0.25rem);
+		transform: translateY(0.25rem);
+		-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
+		-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
+		-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
+		transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+		padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+		position: relative;
+		width: 80rem;
+		max-width: 100%;
+		background-color: rgba(27, 31, 34, 0.85);
+		border-radius: 4px;
+		opacity: 0;
+	}
 
+
+	.container-pgiall{
+		width: fit-content;
+		margin: 20px auto;
+		height: auto;
+	}
+	.container-pgi{
+		width: calc(33% - 6px);
+		overflow:hidden;
+		height: fit-content;
+		margin:3px;
+		padding: 0;
+		display:block;
+		position:relative;
+		float:left;
+	}
+	.pgi{
+		width: 100%;
+		transition-duration: .3s;
+		max-width: 100%;
+		display:block;
+		overflow:hidden;
+		cursor:pointer;
+	}
+	.title-pgi{
+		position:absolute;
+		display:block;
+		cursor:pointer;
+		top: 35%;
+		display: none;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		font-weight: bold;
+		font-size: 1.6em;
+		text-shadow: 1px 5px 10px black;
+		transition-duration: .3s;
+	}
+	.text-pgi{
+		position:absolute;
+		top: 70%;
+		cursor:pointer;
+		max-width: 80%;
+		text-align:center;
+		left: 50%;
+		text-shadow: 1px 5px 10px black;
+		font-size: 1em;
+		display:none;
+		margin-right: -50%;
+		transition-duration: .3s;
+		transform: translate(-50%, -50%) 
+	}
+	.container-pgi:hover img{
+		transform: scale(1.2);
+		transition-duration: .3s;
+		filter: grayscale(50%);
+		opacity: .7;
+	}
+	.container-pgi:hover span{
+		color:white;
+		display: block;
+		transition-duration: .3s;
+	}
+	@media only screen and (max-width: 900px) {
+		.container-pgi {
+			width: calc(50% - 6px);
+		}
+	}
+	@media only screen and (max-width: 400px) {
+		.container-pgi {
+			width: 100%;
+		}
+	}
 /* Footer */
 
 	#footer {
