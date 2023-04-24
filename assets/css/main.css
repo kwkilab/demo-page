@@ -19,7 +19,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video, 
 .dropbtn, .container-pgiall, .container-pgi, .pgi, 
-.halfscreen1, .halfscreen2, .map {
+.halfscreen1, .halfscreen2, .map, .card, .column {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1546,7 +1546,14 @@ input, select, textarea {
 				#header nav.use-middle:after {
 					display: none;
 				}
-
+				.dropdown-content {
+					display: none;
+					position: absolute;
+					background-color: rgba(255, 255, 255, 0.075);
+					width: 100%;
+					overflow: hidden
+				}
+	
 		}
 
 /* Main */
@@ -1670,6 +1677,13 @@ input, select, textarea {
 			}
 
 		}
+	.column {
+		padding: 0 0 1rem 0;
+	}
+	.card {
+		border: solid 1px #ffffff;
+		padding: 1rem 1rem 0rem 1rem
+	}
 /* Gallery */
 	#main .article-pgi {
 		-moz-transform: translateY(0.25rem);
@@ -1687,6 +1701,7 @@ input, select, textarea {
 		background-color: rgba(27, 31, 34, 0.85);
 		border-radius: 4px;
 		opacity: 0;
+		margin:auto
 	}
 
 
@@ -1756,11 +1771,18 @@ input, select, textarea {
 		.container-pgi {
 			width: calc(50% - 6px);
 		}
+		.title-pgi {
+			text-align: center;
+		}
 	}
 	@media only screen and (max-width: 400px) {
 		.container-pgi {
 			width: 100%;
 		}
+		.title-pgi {
+			text-align: center;
+		}
+
 	}
 
 /* Contact */
