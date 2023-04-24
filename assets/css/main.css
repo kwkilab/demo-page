@@ -19,7 +19,8 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video, 
 .dropbtn, .container-pgiall, .container-pgi, .pgi, 
-.halfscreen1, .halfscreen2, .map, .card, .column {
+.halfscreen1, .halfscreen2, .map, .card, .column,
+mobilelink1, mobilelink2 {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -1427,6 +1428,8 @@ input, select, textarea {
 			/* Show the dropdown menu on hover */
 			.dropdown:hover .dropdown-content {display: block;}
 			
+			#mobilelink1, #mobilelink2 {display: none;}
+
 		#header nav.use-middle ul li.is-middle {
 			border-left: 0;
 		}
@@ -1551,19 +1554,10 @@ input, select, textarea {
 				}
 
 				.dropbtn {
-					width: 100%;
-					border-right: 0;
-					border-top: solid 1px #ffffff;
+					display: none;
 				}
 				
-				.dropdown-content {
-					display: none;
-					position: relative;
-					background-color: rgba(255, 255, 255, 0.075);
-					width: 100%;
-					overflow: hidden
-				}
-	
+				#mobilelink1, #mobilelink2 {display:list-item;}
 		}
 
 /* Main */
